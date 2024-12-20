@@ -1,33 +1,33 @@
 <?php
 
 /**
- * Plugin Name: Breakdance Custom Elements
- * Plugin URI: https://breakdance.com/
- * Description: Boilerplate plugin to save your custom elements created with Element Studio.
- * Author: Breakdance
- * Author URI: https://breakdance.com/
+ * Plugin Name: Skreeen Custom Elements
+ * Plugin URI: https://skreeen.co/
+ * Description: Éléments conçus par Skreeen pour simplifier le développement des sites web.
+ * Author: Skreeen
+ * Author URI: https://skreeen.co/
  * License: GPLv2
  * Text Domain: breakdance
  * Domain Path: /languages/
  * Version: 0.0.1
  */
 
-namespace BreakdanceCustomElements;
+namespace SkreeenCustomElements;
 
 use function Breakdance\Util\getDirectoryPathRelativeToPluginFolder;
 
 add_action('breakdance_loaded', function () {
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/elements',
-        'BreakdanceCustomElements',
+        'SkreeenCustomElements',
         'element',
-        'Custom Elements',
+        'Skreeen Elements',
         false
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/macros',
-        'BreakdanceCustomElements',
+        'SkreeenCustomElements',
         'macro',
         'Custom Macros',
         false,
@@ -35,7 +35,7 @@ add_action('breakdance_loaded', function () {
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/presets',
-        'BreakdanceCustomElements',
+        'SkreeenCustomElements',
         'preset',
         'Custom Presets',
         false,
